@@ -1,4 +1,4 @@
-w, h = 1000, 1000
+w, h = 2000, 2000
 
 # Number of blobs
 grid_x = 40
@@ -37,7 +37,7 @@ def brush_points(x1, y1, x2, y2, brush_height, brush_sat, brush_drift, brush_tip
 
     
     rotate(noise(mp[0] * .02, mp[1] * .02) * TWO_PI)
-    # line(0, 0, 40, 40)
+    # line(0, 20, 80, 40)
     
     # Actual Brush Mechanics
     
@@ -88,7 +88,7 @@ def setup():
     current_y = h/2.0 - grid_y_pixels/2.0
     for i in range(grid_x):
         for j in range(grid_y):
-            diff = random(sep_y/2)
+            diff = random(sep_y/4)
             brush_points(current_x, current_y, current_x + sep_x * random(1, 2), current_y + sep_y * random(1, 2), int(sep_x/3), 1, 7, 8, colors[int(random(len(colors)))], 100, 200)
             
             current_y += sep_y
